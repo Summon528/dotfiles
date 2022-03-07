@@ -117,5 +117,6 @@ bindkey '^j' down-line-or-search
 bindkey "^H" backward-char
 bindkey "^L" forward-char
 alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
+alias explorer="/mnt/c/Windows/explorer.exe"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

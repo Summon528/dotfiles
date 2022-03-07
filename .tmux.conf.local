@@ -416,3 +416,6 @@ set -g @plugin 'tmux-plugins/tmux-cpu'
 #
 # "$@"
 # # /!\ do not remove the previous line
+
+bind p previous-window
+bind n next-window
