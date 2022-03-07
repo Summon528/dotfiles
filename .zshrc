@@ -114,6 +114,8 @@ alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export PATH="$(realpath ~/.local/bin):$PATH"
 bindkey '^k' up-line-or-search                                                
 bindkey '^j' down-line-or-search
+bindkey "^H" backward-char
+bindkey "^L" forward-char
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
