@@ -6,6 +6,7 @@ Windows> appendWindowsPath = false" | sudo tee -a /etc/wsl.conf
 
 ```
 sudo -l
+ssh -T git@github.com
 
 sudo add-apt-repository ppa:neovim-ppa/stable -y
 sudo apt update
