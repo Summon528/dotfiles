@@ -113,6 +113,11 @@ alias vim="lvim"
 alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export PATH="$(realpath ~/.local/bin):$PATH"
 alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
+alias grep="rg"
+alias fd="fdfind"
+
+alias win="cd /mnt/c/Users/CodyTseng/"
 alias explorer="/mnt/c/Windows/explorer.exe"
+alias pwsh="/mnt/c/Users/CodyTseng/AppData/Local/Microsoft/WindowsApps/pwsh.exe"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
