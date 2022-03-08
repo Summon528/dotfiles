@@ -1,7 +1,7 @@
 # dotfiles
 ```
 echo "[interop]
-Windows> appendWindowsPath = false" | sudo tee -a /etc/wsl.conf
+  appendWindowsPath = false" | sudo tee -a /etc/wsl.conf
 ```
 
 ```
