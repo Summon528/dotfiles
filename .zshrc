@@ -114,6 +114,7 @@ alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export PATH="$(realpath ~/.local/bin):$(realpath ~/.cargo/bin):$PATH"
 alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
 alias grep="rg"
+alias ls="exa --icons"
 
 alias win="cd /mnt/c/Users/CodyTseng/"
 alias explorer="/mnt/c/Windows/explorer.exe"
