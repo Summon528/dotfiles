@@ -10,7 +10,7 @@ ssh -T git@github.com
 
 sudo add-apt-repository ppa:neovim-ppa/stable -y
 sudo apt update
-sudo apt install -y neovim zsh nodejs npm bat cargo python3-pip
+sudo apt install -y neovim zsh nodejs npm bat cargo python3-pip exa
 sudo npm i -g corepack
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 yes | bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) 
