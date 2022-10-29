@@ -6,7 +6,8 @@ echo "[interop]
 
 ```
 sudo -l
-ssh -T git@github.com
+sudo apt install -y gh
+gh auth login
 
 sudo add-apt-repository ppa:neovim-ppa/stable -y
 sudo apt update
@@ -18,7 +19,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/gpakosz/.tmux
 
 git init --bare ~/.dotfiles
-git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME remote add origin git@github.com:Summon528/dotfiles.git
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME remote add origin https://github.com/Summon528/dotfiles.git
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME fetch --recurse-submodules origin dot
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout -f dot
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config status.showUntrackedFiles no
