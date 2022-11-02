@@ -2,5 +2,6 @@
     name = Chang-Yen Tseng
     email = 10328757+Summon528@users.noreply.github.com
 [credential "https://github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[pull]
+	rebase = true
