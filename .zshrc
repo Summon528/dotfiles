@@ -119,7 +119,8 @@ alias gww="g++ -g -Wall -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wco
 
 alias win="cd /mnt/c/Users/CodyTseng/"
 alias explorer="/mnt/c/Windows/explorer.exe"
-alias pwsh="/mnt/c/Users/CodyTseng/AppData/Local/Microsoft/WindowsApps/pwsh.exe"
-alias pwc="pwsh -Command"
+alias scp="/mnt/c/Windows/System32/OpenSSH/scp.exe"
+alias ssh="/mnt/c/Windows/System32/OpenSSH/ssh.exe"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
