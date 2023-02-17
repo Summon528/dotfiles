@@ -23,7 +23,7 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME remote add origin https://githu
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME fetch --recurse-submodules origin dot
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout -f dot
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config status.showUntrackedFiles no
-sudo chsh -s /usr/bin/zsh
+chsh -s /usr/bin/zsh
 
 exec zsh
 ```
