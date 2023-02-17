@@ -18,9 +18,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 git init --bare ~/.dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME remote add origin https://github.com/Summon528/dotfiles.git
-git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME fetch --recurse-submodules origin dot
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME fetch origin dot
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout -f dot
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config status.showUntrackedFiles no
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME submodule init
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME submodule update
 chsh -s /usr/bin/zsh
 
 exec zsh
