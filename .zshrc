@@ -111,7 +111,7 @@ export EDITOR=lvim
 alias cat="batcat --style=plain"
 alias vim="lvim"
 alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-export PATH="$(realpath ~/.local/bin):$(realpath ~/.cargo/bin):$PATH"
+export PATH="$(realpath ~/.yarn/bin):$(realpath ~/.local/bin):$(realpath ~/.cargo/bin):$PATH"
 alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
 alias grep="rg"
 alias ls="exa --icons"
