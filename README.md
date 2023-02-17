@@ -6,17 +6,17 @@ echo "[interop]
 
 ```
 sudo -l
-sudo apt install -y gh
+sudo zypper -n addrepo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo zypper -n ref
+sudo zypper -n install gh
 gh auth login
 
-sudo add-apt-repository ppa:neovim-ppa/stable -y
-sudo apt update
-sudo apt install -y neovim zsh nodejs npm bat cargo python3-pip exa
+sudo zypper -n in neovim zsh nodejs bat cargo python3-pip exa npm gcc make gcc-c++ tmux gdb
 sudo npm i -g corepack
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 yes | LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone https://github.com/gpakosz/.tmux
 
 git init --bare ~/.dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME remote add origin https://github.com/Summon528/dotfiles.git
