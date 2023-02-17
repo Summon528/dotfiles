@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export EDITOR=vim
-alias cat="batcat --style=plain"
+alias cat="bat --style=plain"
 alias vim="lvim"
 alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export PATH="$(realpath ~/.yarn/bin):$(realpath ~/.local/bin):$(realpath ~/.cargo/bin):$PATH"
