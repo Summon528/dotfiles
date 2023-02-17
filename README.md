@@ -5,8 +5,6 @@ echo "[interop]
 ```
 
 ```
-sudo -l
-
 sudo zypper -n ref
 sudo zypper -n in neovim zsh nodejs bat cargo python3-pip exa npm gcc make gcc-c++ tmux gdb gh
 gh auth login
