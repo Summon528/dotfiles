@@ -113,7 +113,6 @@ alias vim="lvim"
 alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export PATH="$(realpath ~/.yarn/bin):$(realpath ~/.local/bin):$(realpath ~/.cargo/bin):$PATH"
 alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
-alias grep="rg"
 alias ls="exa --icons"
 alias python="python3"
 alias gww="g++ -g -Wall -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -D_GLIBCXX_SANITIZE_VECTOR -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector"
