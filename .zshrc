@@ -117,10 +117,15 @@ alias ls="exa --icons"
 alias python="python3"
 alias gww="g++ -g -Wall -Wextra -pedantic -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -D_GLIBCXX_SANITIZE_VECTOR -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector"
 
-alias win="cd /mnt/c/Users/CodyTseng/"
-alias explorer="/mnt/c/Windows/explorer.exe"
-alias scp="/mnt/c/Program\ Files/OpenSSH/scp.exe"
-alias ssh="/mnt/c/Program\ Files/OpenSSH/ssh.exe"
+if [[ $(grep -i Microsoft /proc/version) ]]; then
+  alias win="cd /mnt/c/Users/CodyTseng/"
+  alias explorer="/mnt/c/Windows/explorer.exe"
+  alias scp="/mnt/c/Program\ Files/OpenSSH/scp.exe"
+  alias ssh="/mnt/c/Program\ Files/OpenSSH/ssh.exe"
+  alias clip="/mnt/c/Windows/System32/clip.exe"
+fi
+
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
