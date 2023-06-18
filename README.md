@@ -9,7 +9,7 @@ sudo zypper -n ref
 sudo zypper -n in gh
 gh auth login
 
-sudo zypper -n in neovim zsh nodejs bat cargo python3-pip exa npm gcc make gcc-c++ tmux gdb gh
+sudo zypper -n in neovim zsh nodejs bat cargo python3-pip exa npm gcc make gcc-c++ tmux gdb gh fzf
 sudo npm i -g corepack
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
