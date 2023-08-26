@@ -99,7 +99,87 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
-  { "ggandor/lightspeed.nvim" }
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    ---@type Flash.Config
+    opts = { modes = { search = { enabled = false } } },
+    kys = {
+      {
+        "s",
+        mode = { "n", "o", "x" },
+        function()
+          local Flash = require("flash")
+          local function format(opts)
+            return {
+              { opts.match.label_render, "Flashlabel" },
+            }
+          end
+          Flash.jump({
+            label = { uppercase = false, format = format },
+            action = function(match, state)
+              local Jump = require("flash.jump")
+              if match.label_render == "" then
+                state.opts.jump.inclusive = true
+                state.opts.jump.pos = "end"
+              else
+                state.opts.jump.inclusive = false
+                state.opts.jump.pos = "start"
+              end
+              Jump.jump(match, state)
+              Jump.on_jump(state)
+            end,
+            labeler = function(matches, state)
+              if not state.default_labeler then
+                state.default_labeler = require("flash.labeler").new(state):labeler()
+              end
+              state.default_labeler(matches, state)
+              local len = #matches
+              for i = 1, len do
+                if matches[i].label then
+                  matches[i].label_render = matches[i].label
+                  table.insert(matches, {
+                    win = matches[i].win,
+                    pos = matches[i].end_pos,
+                    end_pos = matches[i].end_pos,
+                    label = string.upper(matches[i].label),
+                    label_render = ""
+                  })
+                end
+              end
+            end,
+          })
+        end
+      },
+      {
+        "x",
+        mode = { "o" },
+        function() require("flash").jump({ jump = { pos = 'end', inclusive = true } }) end,
+        desc =
+        "Flash Treesitter"
+      },
+      {
+        "r",
+        mode = "o",
+        function() require("flash").remote() end,
+        desc =
+        "Remote Flash"
+      },
+      {
+        "R",
+        mode = { "o", "x" },
+        function() require("flash").treesitter_search() end,
+        desc =
+        "Treesitter Search"
+      },
+      {
+        "<c-s>",
+        mode = { "c" },
+        function() require("flash").toggle() end,
+        desc =
+        "Toggle Flash Search"
+      } }
+  },
 }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
