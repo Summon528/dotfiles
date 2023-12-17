@@ -23,6 +23,7 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout -f dot
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config status.showUntrackedFiles no
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME submodule init
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME submodule update
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 chsh -s /usr/bin/zsh
 
 exec zsh
